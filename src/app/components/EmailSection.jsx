@@ -15,19 +15,19 @@ const ContactSection = () => {
 
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md text-lg leading-8">
+        <p className="text-[#ADB7BE] mb-4 max-w-md text-lg leading-relaxed">
           I&apos;m currently looking for new opportunities,  
-          and my inbox is always open. <br />
-          Whether you have a question or just want to say hi, <br />
+          and my inbox is always open. <br /><br />
+          Whether you have a question or just want to say hi,  
           I&apos;ll try my best to get back to you!
         </p>
 
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row gap-4">
           <Link href="https://github.com/Dev-Shannn">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image src={GithubIcon} alt="Github Icon" width={30} height={30} />
           </Link>
           <Link href="https://www.linkedin.com/in/nishant-prakash-pandey">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image src={LinkedinIcon} alt="Linkedin Icon" width={30} height={30} />
           </Link>
         </div>
       </div>
