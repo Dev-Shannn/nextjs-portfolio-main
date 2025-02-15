@@ -15,9 +15,9 @@ const ContactSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2"></div>
 
       {/* Contact Info */}
-      <div className="z-10">
+      <div className="z-10 max-w-3xl">
         <h5 className="text-2xl font-semibold text-white mb-4">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-6 text-lg leading-relaxed max-w-2xl">
+        <p className="text-[#ADB7BE] mb-6 text-lg leading-relaxed sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
           I&apos;m currently looking for new opportunities, and my inbox is always open. 
           Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
         </p>
