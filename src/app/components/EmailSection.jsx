@@ -9,25 +9,28 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-6 relative"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+      {/* Background Gradient */}
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2"></div>
 
+      {/* Contact Info */}
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md text-lg leading-7">
+        <h5 className="text-2xl font-semibold text-white mb-4">Let&apos;s Connect</h5>
+        <p className="text-[#ADB7BE] mb-6 max-w-md text-lg leading-relaxed">
           I&apos;m currently looking for new opportunities,  
           and my inbox is always open. <br />
           Whether you have a question or just want to say hi,  
-          I&apos;ll try my best to get back to you!
+          I&apos;ll do my best to get back to you!
         </p>
 
-        <div className="socials flex flex-row gap-3">
-          <Link href="https://github.com/Dev-Shannn">
-            <Image src={GithubIcon} alt="Github Icon" width={32} height={32} />
+        {/* Social Links */}
+        <div className="socials flex items-center gap-4">
+          <Link href="https://github.com/Dev-Shannn" target="_blank">
+            <Image src={GithubIcon} alt="Github Icon" width={36} height={36} className="hover:opacity-80 transition-opacity" />
           </Link>
-          <Link href="https://www.linkedin.com/in/nishant-prakash-pandey">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" width={32} height={32} />
+          <Link href="https://www.linkedin.com/in/nishant-prakash-pandey" target="_blank">
+            <Image src={LinkedinIcon} alt="Linkedin Icon" width={36} height={36} className="hover:opacity-80 transition-opacity" />
           </Link>
         </div>
       </div>
