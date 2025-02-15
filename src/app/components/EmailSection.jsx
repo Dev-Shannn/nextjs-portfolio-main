@@ -17,11 +17,9 @@ const ContactSection = () => {
       {/* Contact Info */}
       <div className="z-10">
         <h5 className="text-2xl font-semibold text-white mb-4">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-6 max-w-md text-lg leading-relaxed">
-          I&apos;m currently looking for new opportunities,  
-          and my inbox is always open. <br />
-          Whether you have a question or just want to say hi,  
-          I&apos;ll do my best to get back to you!
+        <p className="text-[#ADB7BE] mb-6 text-lg whitespace-nowrap">
+          I&apos;m currently looking for new opportunities, and my inbox is always open. 
+          Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
         </p>
 
         {/* Social Links */}
