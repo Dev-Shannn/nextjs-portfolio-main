@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/projects/placeholder.png",
     tag: ["All"],
     gitUrl: "#",
-    previewUrl: "https://www.linkedin.com/in/nishant-prakash-pandey", 
+    previewUrl: "https://www.linkedin.com/in/nishant-prakash-pandey",
   },
 ];
 
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="text-white py-6 px-4 sm:py-12 xl:px-12">
+    <section id="projects" className="text-white max-w-screen-lg mx-auto py-6 px-2 sm:px-6 xl:px-8">
       <h2 className="text-center text-4xl font-bold mb-4 md:mb-6">
         My Projects
       </h2>
@@ -48,7 +48,7 @@ const ProjectsSection = () => {
       </div>
 
       {/* Projects Grid */}
-      <ul ref={ref} className="grid md:grid-cols-3 gap-4 md:gap-8">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-4 md:gap-6">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
