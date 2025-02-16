@@ -17,8 +17,17 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
+  const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  const handleTagChange = (newTag) => {
+    setTag(newTag);
+  };
+
+  const filteredProjects = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -27,16 +36,20 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="text-white py-6 px-4 sm:py-12 xl:px-12">
-      <h2 className="text-center text-4xl font-bold mb-4 md:mb-6">My Projects</h2>
+      <h2 className="text-center text-4xl font-bold mb-4 md:mb-6">
+        My Projects
+      </h2>
 
-      {/* Single "All" Tag */}
-      <div className="flex justify-center py-4">
-        <ProjectTag isSelected={true} />
+      {/* Project Tags */}
+      <div className="flex justify-center gap-4 py-4">
+        <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
+        <ProjectTag onClick={handleTagChange} name="Web" isSelected={tag === "Web"} />
+        <ProjectTag onClick={handleTagChange} name="Mobile" isSelected={tag === "Mobile"} />
       </div>
 
       {/* Projects Grid */}
-      <ul ref={ref} className="grid md:grid-cols-3 gap-4 md:gap-8">
-        {projectsData.map((project, index) => (
+      <ul ref={ref} className="grid md:grid-cols-3 gap-6 md:gap-8">
+        {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
             variants={cardVariants}
