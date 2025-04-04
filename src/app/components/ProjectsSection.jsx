@@ -3,7 +3,22 @@ import React, { useState, useRef } from "react";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
+// Empty projects data
 const projectsData = []; // No projects added yet
+
+const ProjectCard = ({ title, description, imgUrl, gitUrl, previewUrl }) => {
+  return (
+    <div className="project-card bg-gray-800 p-6 rounded-lg">
+      <img src={imgUrl} alt={title} className="w-full h-48 object-cover rounded-lg mb-4" />
+      <h3 className="text-xl font-bold text-white">{title}</h3>
+      <p className="text-white mb-4">{description}</p>
+      <div className="flex gap-4">
+        {gitUrl && <a href={gitUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500">GitHub</a>}
+        {previewUrl && <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500">Preview</a>}
+      </div>
+    </div>
+  );
+};
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
